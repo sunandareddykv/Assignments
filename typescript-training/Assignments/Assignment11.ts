@@ -1,15 +1,27 @@
-//Count the total number of words in the sentence "Java programming is fun and challenging"
-function countWords(sentence: string): number {
-    // 1. Trim leading/trailing whitespace
-    // 2. Split by any whitespace character(s)
-    // 3. Filter out empty strings (to handle cases with only spaces)
-    const words = sentence.trim().split(/\s+/);
-    
-    // If the string is empty after trimming, the count should be 0
-    return words[0] === "" ? 0 : words.length;
-}
+//1. Count the total number of words in the sentence.
+//2. Print the sentence words in reverse order.
+//3. Convert the first character of each word to uppercase and print original sentence
 
-const text: string = "Java programming is fun and challenging";
-const totalWords: number = countWords(text);
+const originalSentence: string = "Java programming is fun and challenging";
 
-console.log(`Total words: ${totalWords}`);
+/**
+ * 1. Count the total number of words
+ */
+const wordsArray: string[] = originalSentence.split(/\s+/);
+const wordCount: number = wordsArray.length;
+
+console.log(`1. Total number of words: ${wordCount}`);
+
+/**
+ * 2. Print the sentence words in reverse order
+ * We clone the array first using [...array] so we don't mutate the original list
+ */
+const reversedWords: string = [...wordsArray].reverse().join(" ");
+console.log(`2. Words in reverse order: "${reversedWords}"`);
+
+/**
+ * 3. Convert the first character of each word to uppercase
+ */
+const capitalizedSentence: string = wordsArray.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+
+console.log(`3. Capitalized sentence: "${capitalizedSentence}"`);
