@@ -25,4 +25,4 @@ console.log(isPalindrome("A man, a plan, a canal: Panama")); // Output: true
 console.log(isPalindrome("race a car"));                     // Output: false
 console.log(isPalindrome(" "));                            // Output: true
 
-export {}
+export {};

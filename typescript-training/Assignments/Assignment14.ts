@@ -1,3 +1,5 @@
+//Find second and 3rd highest numbers.
+
 const numbers: number[] = [12, 34, 11, 36, 87, 98, 93];
 
 function findTopThree(arr: number[]): void {
