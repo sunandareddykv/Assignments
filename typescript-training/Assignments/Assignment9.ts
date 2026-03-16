@@ -1,6 +1,6 @@
 // Print Diamond shape
 
-let n: number = 10; // Number of rows in the top half of the diamond
+let n: number = 6; // Number of rows in the top half of the diamond
 
 // Upper half of the diamond
 for (let i: number = 1; i <= n; i++) {
